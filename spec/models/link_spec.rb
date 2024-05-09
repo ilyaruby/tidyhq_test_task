@@ -18,4 +18,12 @@ RSpec.describe Link, type: :model do
       expect(link).not_to be_valid
     end
   end
+
+  context 'analytics' do
+    it 'increments #visit_count' do
+      expect {
+        link.visited
+      }.to change(link, :visit_count).from(0).to(1)
+    end
+  end
 end
