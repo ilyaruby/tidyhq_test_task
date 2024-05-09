@@ -22,6 +22,7 @@ RSpec.describe LinksController, type: :controller do
   
   describe "GET #show" do
     let(:link) { Link.create(original_url: 'https://example.com', short_url: 'abc123') }
+
     it "redirects to the original URL" do
       get :unshort, params: { short_url: link.short_url }
       expect(response).to redirect_to('https://example.com')

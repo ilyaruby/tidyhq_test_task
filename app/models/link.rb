@@ -5,6 +5,10 @@ class Link < ApplicationRecord
   before_validation :generate_short_url, on: :create
   before_create :set_expiration_date
 
+  def expired?
+    expires_at < Time.current
+  end
+
   private
 
   def generate_short_url

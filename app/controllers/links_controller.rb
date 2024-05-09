@@ -14,12 +14,16 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find_by(short_url: params[:short_url])
-    render :show
+    if @link.present? && !@link.expired?
+      render :show
+    else
+      render plain: "That link does not exist or expired", status: :not_found
+    end
   end
 
   def unshort
     @link = Link.find_by(short_url: params[:short_url])
-    if @link.present?
+    if @link.present? && !@link.expired?
       redirect_to @link.original_url, allow_other_host: true
     else
       render plain: "That link does not exist or expired", status: :not_found
