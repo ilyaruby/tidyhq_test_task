@@ -4,19 +4,19 @@ Please develop a simple URL shortener app. This app should be designed to create
 
 ### Requirements
 
-- **Use Ruby On Rails**
-- **Ability to enter a URL and get back a short URL**
-- **The URL should be validated**
-- **When the user hits a short link, the service should redirect to the original link**
-- **Links will expire after a standard default time span**
-- **Shortened links should not be predictable**
-- **A very simple UI is fine**
+- Use Ruby On Rails
+- Ability to enter a URL and get back a short URL
+- The URL should be validated
+- When the user hits a short link, the service should redirect to the original link
+- Links will expire after a standard default time span
+- Shortened links should not be predictable
+- A very simple UI is fine
 
 ### Stretch Goals
 
-- **Short URL is automatically copied to the clipboard**
-- **Basic analytics (number of times visited)**
-- **API**
+- Short URL is automatically copied to the clipboard
+- Basic analytics (number of times visited)
+- API
 
 ### Note:
 
