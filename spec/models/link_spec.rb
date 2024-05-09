@@ -10,4 +10,12 @@ RSpec.describe Link, type: :model do
   it 'sets #short url' do
     expect(link.short_url).not_to be_empty
   end
+  
+  context 'validation' do
+    let(:link) { build :link, original_url: '' }
+
+    it 'validates presence of original_url' do
+      expect(link).not_to be_valid
+    end
+  end
 end
