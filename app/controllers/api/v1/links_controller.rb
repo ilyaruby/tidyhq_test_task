@@ -17,7 +17,7 @@ module Api
         if link
           render json: { original_url: link.original_url }
         else
-          render json: { error: "Not found" }, status: :not_found
+          render json: { error: 'Not found' }, status: :not_found
         end
       end
 
@@ -29,4 +29,3 @@ module Api
     end
   end
 end
-

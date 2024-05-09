@@ -1,5 +1,5 @@
 class Link < ApplicationRecord
-  validates :original_url, presence: true, url: true  # Ensure you add a URL validator gem or custom validation
+  validates :original_url, presence: true, url: true # Ensure you add a URL validator gem or custom validation
   validates :short_url, presence: true, uniqueness: true
 
   before_validation :generate_short_url, on: :create

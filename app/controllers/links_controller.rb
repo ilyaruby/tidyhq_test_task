@@ -17,7 +17,7 @@ class LinksController < ApplicationController
     if @link.present? && !@link.expired?
       render :show
     else
-      render plain: "That link does not exist or expired", status: :not_found
+      render plain: 'That link does not exist or expired', status: :not_found
     end
   end
 
@@ -27,7 +27,7 @@ class LinksController < ApplicationController
       @link.visited
       redirect_to @link.original_url, allow_other_host: true
     else
-      render plain: "That link does not exist or expired", status: :not_found
+      render plain: 'That link does not exist or expired', status: :not_found
     end
   end
 

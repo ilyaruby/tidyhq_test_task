@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Links", type: :request do
+RSpec.describe 'Links', type: :request do
   describe 'URL Shortening/Deshortening Process', type: :request do
     it 'shortens an URL and then redirects based on the shortened URL' do
       post links_path, params: { link: { original_url: 'https://example.com' } }

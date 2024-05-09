@@ -10,7 +10,7 @@ RSpec.describe Link, type: :model do
   it 'sets #short url' do
     expect(link.short_url).not_to be_empty
   end
-  
+
   context 'validation' do
     let(:link) { build :link, original_url: '' }
 
@@ -21,9 +21,9 @@ RSpec.describe Link, type: :model do
 
   context 'analytics' do
     it 'increments #visit_count' do
-      expect {
+      expect do
         link.visited
-      }.to change(link, :visit_count).from(0).to(1)
+      end.to change(link, :visit_count).from(0).to(1)
     end
   end
 end
