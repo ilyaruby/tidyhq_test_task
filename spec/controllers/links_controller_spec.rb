@@ -7,7 +7,7 @@ RSpec.describe LinksController, type: :controller do
         expect {
           post :create, params: { link: { original_url: 'https://example.com' } }
         }.to change(Link, :count).by(1)
-        expect(response).to redirect_to(Link.last)
+        expect(response).to redirect_to(shortened_path(Link.last.short_url))
       end
     end
   

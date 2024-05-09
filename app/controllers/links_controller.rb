@@ -6,14 +6,14 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
-      redirect_to @link, notice: 'Short link created successfully.'
+      redirect_to shortened_path(@link.short_url), notice: 'Short link created successfully.'
     else
       render :new
     end
   end
 
   def show
-    @link = Link.find_by(id: params[:id])
+    @link = Link.find_by(short_url: params[:short_url])
     render :show
   end
 
