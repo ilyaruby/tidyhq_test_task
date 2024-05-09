@@ -1,4 +1,11 @@
-<h1>Short Link Created!</h1>
+<h1>Here is your short link:</h1>
 <p>
   Shortened URL: <%= link_to unshort_path(@link.short_url), unshort_path(@link.short_url) %>
+</p>
+<br>
+<p>
+  Will expire at: <%= @link.expires_at %>
+</p>
+<p>
+  Visited so far: <%= @link.visit_count %>
 </p>

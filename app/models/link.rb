@@ -9,6 +9,13 @@ class Link < ApplicationRecord
     expires_at < Time.current
   end
 
+  def visited
+    # We might want to lock a row in production if exact precision is needed,
+    # but it seems unlikely that such precision is necessary
+
+    update(visit_count: visit_count + 1)
+  end
+
   private
 
   def generate_short_url
