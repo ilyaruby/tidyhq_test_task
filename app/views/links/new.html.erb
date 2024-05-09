@@ -1,0 +1,6 @@
+<h1>Create a New Short Link</h1>
+
+<%= simple_form_for @link, url: links_path do |f| %>
+  <%= f.input :original_url, label: "Enter URL to shorten" %>
+  <%= f.button :submit, "Shorten URL", class: 'btn btn-primary' %>
+<% end %>
