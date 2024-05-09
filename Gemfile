@@ -50,6 +50,7 @@ group :development, :test do
   gem "pry-rescue"
   gem "pry-stack_explorer"
   gem "binding_of_caller"
+  gem "rspec-rails"
 end
 
 group :test do
