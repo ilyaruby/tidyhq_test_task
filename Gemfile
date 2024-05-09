@@ -15,6 +15,11 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'validate_url', '~> 1.0'
+gem 'bootstrap', '~> 5.1.3'
+gem 'simple_form'
+gem 'bootstrap', '~> 5.1.3'
+gem 'sassc-rails'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem "pry"
